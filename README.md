@@ -14,6 +14,14 @@ Deep neural networks have been shown vulnerable to adversarial examples. Even th
 - Numpy == 1.21.5
 - Adversarial-Robustness-Toolbox == 1.10.3
 
+To ensure optimal compatibility and performance when training models on an NVIDIA GeForce RTX 3090, it is recommended to install CUDA 11.1 or a higher version. The following `pip` command will set up the required PyTorch environment.
+
+```shell
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+```
+
+
+
 ### Pipeline
 #### Pretraining
 Use the following script to generate the pre-trained ResNet18 model on CIFAR-10 dataset. For Tiny-ImageNet, you may need to download the dataset from this [link](http://cs231n.stanford.edu/tiny-imagenet-200.zip) and move the data to your data directory.
